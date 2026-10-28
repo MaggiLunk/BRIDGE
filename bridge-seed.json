@@ -1,0 +1,857 @@
+{
+ "labels": [
+  {
+   "slug": "supa",
+   "kind": "entity",
+   "label": "SUPA",
+   "purpose": "Log every channel, session, event, label and table",
+   "repo": "MaggiLunk/SUPA"
+  },
+  {
+   "slug": "lat",
+   "kind": "entity",
+   "label": "LAT",
+   "purpose": "Rule book \u2014 standards, decisions, vocabulary, topology index",
+   "repo": "MaggiLunk/LAT"
+  },
+  {
+   "slug": "pix",
+   "kind": "entity",
+   "label": "PIX.MOV",
+   "purpose": "Films, decks, votes, taste graph, catalog, shorts",
+   "repo": "MaggiLunk/pix",
+   "legacy_schemas": [
+    "pix2",
+    "pixgame",
+    "pixlegacy"
+   ]
+  },
+  {
+   "slug": "cine",
+   "kind": "entity",
+   "label": "CINE",
+   "purpose": "Projects, bins, timelines, exports, distributor",
+   "repo": null,
+   "legacy_schemas": [
+    "cine"
+   ]
+  },
+  {
+   "slug": "brainstorm",
+   "kind": "entity",
+   "label": "Brainstorm",
+   "purpose": "Notes-first library \u2014 notes, dream log, monsters, posters",
+   "repo": "MaggiLunk/BRAINSTORM",
+   "legacy_schemas": [
+    "brainstorm"
+   ]
+  },
+  {
+   "slug": "music",
+   "kind": "entity",
+   "label": "MUSIC",
+   "purpose": "SSOT for all music \u2014 tracks, scores, rights, usage",
+   "repo": null
+  },
+  {
+   "slug": "webserver",
+   "kind": "entity",
+   "label": "WEBSERVER",
+   "purpose": "Servers, pulse, traffic, deploys, logs, config, alerts",
+   "repo": "MaggiLunk/WEBSERVER"
+  },
+  {
+   "slug": "dashboard",
+   "kind": "method",
+   "status": "retired",
+   "label": "DASHBOARD",
+   "purpose": "RETIRED as a data label 2026-10-27 (BIZ-MODEL v1.00.00): DASHBOARD is a METHOD (the Viewable Control Plane); its MOSAIC-tech tables moved to mosaic.*; repo + living doc remain the method paperwork",
+   "repo": "MaggiLunk/DASHBOARD"
+  },
+  {
+   "slug": "mosaic",
+   "kind": "method",
+   "label": "MOSAIC",
+   "purpose": "The TECH (METHOD): MOSAIC design data \u2014 layouts, themes/.dot rules, designs, CMS bindings; data about entities designs, never product data",
+   "repo": "MaggiLunk/MOSAIC"
+  },
+  {
+   "slug": "monetization",
+   "kind": "entity",
+   "label": "MONETIZATION",
+   "purpose": "Sites, slots, skins, campaigns, creatives",
+   "repo": "MaggiLunk/MONETIZATION"
+  },
+  {
+   "slug": "biscuit",
+   "kind": "entity",
+   "label": "BISCUIT",
+   "purpose": "Consent records, preferences, policy, audit",
+   "repo": "MaggiLunk/BISCUIT"
+  },
+  {
+   "slug": "licensing",
+   "kind": "entity",
+   "label": "LICENSING",
+   "purpose": "Rights pipeline, sources, clearance ledger",
+   "repo": "MaggiLunk/LICENSING"
+  },
+  {
+   "slug": "analytics",
+   "kind": "entity",
+   "label": "ANALYTICS",
+   "purpose": "Events, aggregates, funnels \u2014 behind the privacy wall",
+   "repo": "MaggiLunk/ANALYTICS"
+  },
+  {
+   "slug": "comb",
+   "kind": "entity",
+   "label": "COMB",
+   "purpose": "Collections, items, sources, link-backs",
+   "repo": "MaggiLunk/COMB"
+  },
+  {
+   "slug": "design",
+   "kind": "entity",
+   "label": "DESIGN",
+   "purpose": "Design packages, tokens, versions (STARFIELD first)",
+   "repo": "MaggiLunk/DESIGN"
+  },
+  {
+   "slug": "vault",
+   "kind": "entity",
+   "label": "VAULT",
+   "purpose": "Encrypted third-party tokens/config \u2014 write-only, masked reads",
+   "repo": null,
+   "legacy_schemas": [
+    "vault2"
+   ]
+  },
+  {
+   "slug": "dbinterface",
+   "kind": "entity",
+   "label": "DB Interface",
+   "purpose": "DB inventory, connections, access log \u2014 Founder oversight",
+   "repo": "MaggiLunk/db-interface"
+  },
+  {
+   "slug": "mesh",
+   "kind": "entity",
+   "label": "MESH",
+   "purpose": "Mesh network graph \u2014 nodes, edges, scans of every artifact/document/DB/repo/project for visual tracking",
+   "repo": null
+  }
+ ],
+ "labels_source": "supa/registry/labels.yaml (supa.labels table is empty in GAKz \u2014 registry file is the record)",
+ "legs": [
+  {
+   "label_slug": "supa",
+   "leg": "agent",
+   "version": "v00.07.00",
+   "status": "in-sync",
+   "ref": "MaggiLunk/SUPA v00.07.00 pass (LOG 2026-10-27-001)",
+   "na_reason": null
+  },
+  {
+   "label_slug": "supa",
+   "leg": "db",
+   "version": "v00.01.00",
+   "status": "in-sync",
+   "ref": "DDL run + seeded; audited live 2026-10-26 via Management API (LOG 2026-10-26-002); step-4 closure (LOG 2026-10-26-006)",
+   "na_reason": null
+  },
+  {
+   "label_slug": "supa",
+   "leg": "github",
+   "version": "v00.07.00",
+   "status": "in-sync",
+   "ref": "7abd08d4 (head verified 2026-10-27; repo VERSION 00.07.00 = local ~/workspace/supa/VERSION 00.07.00)",
+   "na_reason": null
+  },
+  {
+   "label_slug": "supa",
+   "leg": "live",
+   "version": null,
+   "status": "na",
+   "ref": null,
+   "na_reason": "no live app leg yet"
+  },
+  {
+   "label_slug": "supa",
+   "leg": "server",
+   "version": null,
+   "status": "na",
+   "ref": null,
+   "na_reason": "no server leg yet"
+  },
+  {
+   "label_slug": "lat",
+   "leg": "agent",
+   "version": "v01.10.00",
+   "status": "in-sync",
+   "ref": null,
+   "na_reason": null
+  },
+  {
+   "label_slug": "lat",
+   "leg": "db",
+   "version": "v00.01.00",
+   "status": "in-sync",
+   "ref": "DDL run + seeded; audited live 2026-10-26 via Management API (LOG 2026-10-26-002); step-4 closure (LOG 2026-10-26-006)",
+   "na_reason": null
+  },
+  {
+   "label_slug": "lat",
+   "leg": "github",
+   "version": "v01.10.00",
+   "status": "in-sync",
+   "ref": "166969a7 (2026-10-26) \u2014 pushed from a normal chat turn after the 2026-10-23 restart-kills and a 2026-10-24 policy denial; drift CLEARED",
+   "na_reason": null
+  },
+  {
+   "label_slug": "lat",
+   "leg": "live",
+   "version": null,
+   "status": "na",
+   "ref": null,
+   "na_reason": "rule book \u2014 live leg is the docs themselves"
+  },
+  {
+   "label_slug": "lat",
+   "leg": "server",
+   "version": null,
+   "status": "na",
+   "ref": null,
+   "na_reason": "no server leg"
+  },
+  {
+   "label_slug": "pix",
+   "leg": "agent",
+   "version": "v01.00.00",
+   "status": "in-sync",
+   "ref": "ts-spaces/pix-2 staging = v1/ push source (verified 2026-10-27)",
+   "na_reason": null
+  },
+  {
+   "label_slug": "pix",
+   "leg": "db",
+   "version": "v00.01.00",
+   "status": "in-sync",
+   "ref": "52 tables / 251,679 rows verified 2026-10-26 (pix-migration REPORT); recounted 2026-10-27: 52 tables, pix_movie_stats 13,663",
+   "na_reason": null
+  },
+  {
+   "label_slug": "pix",
+   "leg": "github",
+   "version": "v01.00.00",
+   "status": "in-sync",
+   "ref": "ada57602 (head verified 2026-10-27) \u2014 v1/ = complete current source of record + v1.00.00/ frozen snapshot; repo carries VERSION.md, no VERSION file",
+   "na_reason": null
+  },
+  {
+   "label_slug": "pix",
+   "leg": "live",
+   "version": "v01.00.00",
+   "status": "drift",
+   "ref": "live artifact pix-2 runs on SQLite app.db mirror; GAKz is data SSOT of record; cutover Phases A\u2013D pending \u2014 live data diverges from DB leg until cutover",
+   "na_reason": null
+  },
+  {
+   "label_slug": "pix",
+   "leg": "server",
+   "version": null,
+   "status": "na",
+   "ref": null,
+   "na_reason": "no server deployment \u2014 PIX.MOV runs as a Muse artifact; WEBSERVER label hosts servers"
+  },
+  {
+   "label_slug": "cine",
+   "leg": "db",
+   "version": "v00.01.00",
+   "status": "in-sync",
+   "ref": "CINE data rides the pix schema (pix/cine/* branch of the 52-table pix fill, 2026-10-26); no cine schema of its own",
+   "na_reason": null
+  },
+  {
+   "label_slug": "cine",
+   "leg": "github",
+   "version": "v01.00.00",
+   "status": "in-sync",
+   "ref": "ab860fbe (head verified 2026-10-27; repo VERSION 1.00.00)",
+   "na_reason": null
+  },
+  {
+   "label_slug": "cine",
+   "leg": "server",
+   "version": null,
+   "status": "na",
+   "ref": null,
+   "na_reason": "no server deployment \u2014 CINE runs as a Muse artifact within PIX.MOV"
+  },
+  {
+   "label_slug": "brainstorm",
+   "leg": "db",
+   "version": null,
+   "status": "na",
+   "ref": null,
+   "na_reason": "no GAKz schema yet"
+  },
+  {
+   "label_slug": "brainstorm",
+   "leg": "github",
+   "version": "v01.00.00",
+   "status": "in-sync",
+   "ref": "04decbb8 (head verified 2026-10-27; repo VERSION 1.00.00)",
+   "na_reason": null
+  },
+  {
+   "label_slug": "music",
+   "leg": "db",
+   "version": "v00.01.00",
+   "status": "in-sync",
+   "ref": "music schema live in GAKz: 7 tables, 7 registered in supa.table_registry; tracks 51 rows (recounted 2026-10-27)",
+   "na_reason": null
+  },
+  {
+   "label_slug": "music",
+   "leg": "github",
+   "version": "v00.01.00",
+   "status": "in-sync",
+   "ref": "f26533d0 (head verified 2026-10-27; unchanged since repo went live 2026-10-22)",
+   "na_reason": null
+  },
+  {
+   "label_slug": "music",
+   "leg": "live",
+   "version": null,
+   "status": "na",
+   "ref": null,
+   "na_reason": "no live app leg \u2014 MUSIC surfaces inside the PIX.MOV artifact (versions.yaml: app leg n/a)"
+  },
+  {
+   "label_slug": "music",
+   "leg": "server",
+   "version": null,
+   "status": "na",
+   "ref": null,
+   "na_reason": "no server deployment \u2014 MUSIC is a data label; its workspace rides the PIX.MOV artifact"
+  },
+  {
+   "label_slug": "webserver",
+   "leg": "db",
+   "version": "v00.01.00",
+   "status": "in-sync",
+   "ref": "webserver schema live in GAKz: 16 tables, 16 registered in supa.table_registry",
+   "na_reason": null
+  },
+  {
+   "label_slug": "webserver",
+   "leg": "github",
+   "version": "v01.01.00",
+   "status": "in-sync",
+   "ref": "7a4ed8c9 (head verified 2026-10-27; repo VERSION 1.01.00)",
+   "na_reason": null
+  },
+  {
+   "label_slug": "dashboard",
+   "leg": "db",
+   "version": null,
+   "status": "na",
+   "ref": null,
+   "na_reason": "dashboard.* schema moved to mosaic.* 2026-10-27 (BIZ-MODEL \u00a72 design-data move); no dashboard schema in GAKz"
+  },
+  {
+   "label_slug": "dashboard",
+   "leg": "github",
+   "version": "v01.16.00",
+   "status": "in-sync",
+   "ref": "e49be76b (head + repo VERSION 1.16.00 verified 2026-10-27; thin control-plane doc after the BIZ-MODEL split)",
+   "na_reason": null
+  },
+  {
+   "label_slug": "mosaic",
+   "leg": "agent",
+   "version": "v01.00.00",
+   "status": "in-sync",
+   "ref": "MOSAIC spec authored + maintained by Lunk sessions from ~/workspace/mosaic/",
+   "na_reason": null
+  },
+  {
+   "label_slug": "mosaic",
+   "leg": "db",
+   "version": "v00.01.00",
+   "status": "in-sync",
+   "ref": "mosaic.* live in GAKz: 12 MOSAIC-tech design-data tables (moved from dashboard.* 2026-10-27; design-data exception, BIZ-MODEL \u00a72)",
+   "na_reason": null
+  },
+  {
+   "label_slug": "mosaic",
+   "leg": "github",
+   "version": "v01.00.00",
+   "status": "in-sync",
+   "ref": "MaggiLunk/MOSAIC first content: MOSAIC v1.00.00 spec push 2bfe425f, read-back verified",
+   "na_reason": null
+  },
+  {
+   "label_slug": "mosaic",
+   "leg": "live",
+   "version": null,
+   "status": "na",
+   "ref": "-",
+   "na_reason": "method \u2014 no live product of its own; artifacts built WITH MOSAIC are entities registered in supa.artifacts"
+  },
+  {
+   "label_slug": "mosaic",
+   "leg": "server",
+   "version": null,
+   "status": "na",
+   "ref": "-",
+   "na_reason": "no server \u2014 MOSAIC is a METHOD; its paperwork lives in the repo, its design data in mosaic.*"
+  },
+  {
+   "label_slug": "monetization",
+   "leg": "db",
+   "version": null,
+   "status": "na",
+   "ref": null,
+   "na_reason": "no GAKz schema yet"
+  },
+  {
+   "label_slug": "monetization",
+   "leg": "github",
+   "version": "v01.02.00",
+   "status": "in-sync",
+   "ref": "c8d7850b",
+   "na_reason": null
+  },
+  {
+   "label_slug": "biscuit",
+   "leg": "db",
+   "version": null,
+   "status": "na",
+   "ref": null,
+   "na_reason": "no GAKz schema yet"
+  },
+  {
+   "label_slug": "biscuit",
+   "leg": "github",
+   "version": "v01.00.00",
+   "status": "in-sync",
+   "ref": "48ee72ed (head verified 2026-10-27; repo VERSION 1.00.00)",
+   "na_reason": null
+  },
+  {
+   "label_slug": "licensing",
+   "leg": "db",
+   "version": null,
+   "status": "na",
+   "ref": null,
+   "na_reason": "no GAKz schema yet"
+  },
+  {
+   "label_slug": "licensing",
+   "leg": "github",
+   "version": "v01.00.00",
+   "status": "in-sync",
+   "ref": "32ee0aff (head verified 2026-10-27; repo VERSION 1.00.00)",
+   "na_reason": null
+  },
+  {
+   "label_slug": "analytics",
+   "leg": "db",
+   "version": null,
+   "status": "na",
+   "ref": null,
+   "na_reason": "no GAKz schema yet"
+  },
+  {
+   "label_slug": "analytics",
+   "leg": "github",
+   "version": "v01.00.00",
+   "status": "in-sync",
+   "ref": "2d239c46 (head verified 2026-10-27; repo VERSION 1.00.00)",
+   "na_reason": null
+  },
+  {
+   "label_slug": "comb",
+   "leg": "db",
+   "version": null,
+   "status": "na",
+   "ref": null,
+   "na_reason": "no GAKz schema yet"
+  },
+  {
+   "label_slug": "comb",
+   "leg": "github",
+   "version": "v01.00.00",
+   "status": "in-sync",
+   "ref": "7d688d27 (head verified 2026-10-27; repo VERSION 1.00.00)",
+   "na_reason": null
+  },
+  {
+   "label_slug": "design",
+   "leg": "db",
+   "version": null,
+   "status": "na",
+   "ref": null,
+   "na_reason": "no GAKz schema yet"
+  },
+  {
+   "label_slug": "vault",
+   "leg": "db",
+   "version": "v00.01.00",
+   "status": "in-sync",
+   "ref": "vault schema live in GAKz: 2 tables; 0 registered in supa.table_registry \u2014 registration gap (flagged 2026-10-27)",
+   "na_reason": null
+  },
+  {
+   "label_slug": "vault",
+   "leg": "github",
+   "version": null,
+   "status": "na",
+   "ref": null,
+   "na_reason": "no GitHub repo (labels.yaml repo: null) \u2014 VAULT is a DB-side label; its interface rides DB Interface"
+  },
+  {
+   "label_slug": "dbinterface",
+   "leg": "db",
+   "version": null,
+   "status": "na",
+   "ref": null,
+   "na_reason": "no GAKz schema yet"
+  },
+  {
+   "label_slug": "dbinterface",
+   "leg": "github",
+   "version": "v01.00.00",
+   "status": "in-sync",
+   "ref": "a3414e03 (head verified 2026-10-27; repo VERSION 1.00.00)",
+   "na_reason": null
+  },
+  {
+   "label_slug": "mesh",
+   "leg": "agent",
+   "version": "v01.08.00",
+   "status": "in-sync",
+   "ref": "~/workspace/mesh = push source of record for MaggiLunk/MESH (sync record on file, verified 2026-10-27)",
+   "na_reason": null
+  },
+  {
+   "label_slug": "mesh",
+   "leg": "db",
+   "version": "v00.01.00",
+   "status": "in-sync",
+   "ref": "mesh schema live in GAKz: 3 tables, 3 registered in supa.table_registry; latest graph 179 nodes / 357 edges (scans source=postgres)",
+   "na_reason": null
+  },
+  {
+   "label_slug": "mesh",
+   "leg": "github",
+   "version": "v01.08.00",
+   "status": "in-sync",
+   "ref": "1b005d2c (head verified 2026-10-27)",
+   "na_reason": null
+  }
+ ],
+ "registry_counts": [
+  {
+   "schema_name": "lat",
+   "tables_registered": 7
+  },
+  {
+   "schema_name": "mesh",
+   "tables_registered": 3
+  },
+  {
+   "schema_name": "mosaic",
+   "tables_registered": 12
+  },
+  {
+   "schema_name": "music",
+   "tables_registered": 7
+  },
+  {
+   "schema_name": "pix",
+   "tables_registered": 52
+  },
+  {
+   "schema_name": "supa",
+   "tables_registered": 15
+  },
+  {
+   "schema_name": "webserver",
+   "tables_registered": 16
+  }
+ ],
+ "artifacts": [
+  {
+   "slug": "analytics",
+   "label": "ANALYTICS",
+   "status": "active"
+  },
+  {
+   "slug": "biscuit",
+   "label": "BISCUIT",
+   "status": "active"
+  },
+  {
+   "slug": "brainstorm",
+   "label": "Brainstorm",
+   "status": "active"
+  },
+  {
+   "slug": "cine",
+   "label": "CINE",
+   "status": "active"
+  },
+  {
+   "slug": "comb",
+   "label": "COMB",
+   "status": "active"
+  },
+  {
+   "slug": "dashboard",
+   "label": "DASHBOARD",
+   "status": "active"
+  },
+  {
+   "slug": "db-interface",
+   "label": "DB Interface",
+   "status": "active"
+  },
+  {
+   "slug": "design",
+   "label": "DESIGN",
+   "status": "active"
+  },
+  {
+   "slug": "factory",
+   "label": "FACTORY",
+   "status": "active"
+  },
+  {
+   "slug": "lat-registry",
+   "label": "LAT REGISTRY",
+   "status": "active"
+  },
+  {
+   "slug": "licensing",
+   "label": "LICENSING",
+   "status": "active"
+  },
+  {
+   "slug": "mesh",
+   "label": "MESH",
+   "status": "active"
+  },
+  {
+   "slug": "monetization",
+   "label": "MONETIZATION",
+   "status": "active"
+  },
+  {
+   "slug": "mosaic",
+   "label": "MOSAIC",
+   "status": "active"
+  },
+  {
+   "slug": "music",
+   "label": "MUSIC",
+   "status": "active"
+  },
+  {
+   "slug": "pix-2",
+   "label": "PIX.MOV",
+   "status": "active"
+  },
+  {
+   "slug": "stream",
+   "label": "STREAM",
+   "status": "active"
+  },
+  {
+   "slug": "supa",
+   "label": "SUPA",
+   "status": "active"
+  },
+  {
+   "slug": "webserver",
+   "label": "WEBSERVER",
+   "status": "active"
+  }
+ ],
+ "repos": [
+  {
+   "full_name": "MaggiLunk/ANALYTICS",
+   "artifact_label": "ANALYTICS",
+   "flag": null
+  },
+  {
+   "full_name": "MaggiLunk/BISCUIT",
+   "artifact_label": "BISCUIT",
+   "flag": "Memory recorded this repo as PUBLIC \u2014 GitHub API now shows private:true. Confirm intended."
+  },
+  {
+   "full_name": "MaggiLunk/BRAINSTORM",
+   "artifact_label": "Brainstorm",
+   "flag": null
+  },
+  {
+   "full_name": "MaggiLunk/CINE",
+   "artifact_label": "CINE",
+   "flag": null
+  },
+  {
+   "full_name": "MaggiLunk/COMB",
+   "artifact_label": "COMB",
+   "flag": null
+  },
+  {
+   "full_name": "MaggiLunk/DASHBOARD",
+   "artifact_label": "DASHBOARD",
+   "flag": null
+  },
+  {
+   "full_name": "MaggiLunk/db-interface",
+   "artifact_label": "DB Interface",
+   "flag": null
+  },
+  {
+   "full_name": "MaggiLunk/DESIGN",
+   "artifact_label": "DESIGN",
+   "flag": null
+  },
+  {
+   "full_name": "MaggiLunk/FACTORY",
+   "artifact_label": "FACTORY",
+   "flag": null
+  },
+  {
+   "full_name": "MaggiLunk/LAT",
+   "artifact_label": "LAT REGISTRY",
+   "flag": null
+  },
+  {
+   "full_name": "MaggiLunk/LICENSING",
+   "artifact_label": "LICENSING",
+   "flag": null
+  },
+  {
+   "full_name": "MaggiLunk/MESH",
+   "artifact_label": "MESH",
+   "flag": null
+  },
+  {
+   "full_name": "MaggiLunk/MONETIZATION",
+   "artifact_label": "MONETIZATION",
+   "flag": null
+  },
+  {
+   "full_name": "MaggiLunk/MOSAIC",
+   "artifact_label": "MOSAIC",
+   "flag": null
+  },
+  {
+   "full_name": "MaggiLunk/MUSIC",
+   "artifact_label": "MUSIC",
+   "flag": null
+  },
+  {
+   "full_name": "MaggiLunk/pix",
+   "artifact_label": "PIX.MOV",
+   "flag": null
+  },
+  {
+   "full_name": "MaggiLunk/STARFIELD",
+   "artifact_label": null,
+   "flag": null
+  },
+  {
+   "full_name": "MaggiLunk/STITCH",
+   "artifact_label": null,
+   "flag": null
+  },
+  {
+   "full_name": "MaggiLunk/STREAM",
+   "artifact_label": "STREAM",
+   "flag": null
+  },
+  {
+   "full_name": "MaggiLunk/SUPA",
+   "artifact_label": "SUPA",
+   "flag": "Repo EMPTY from creation until 2026-10-25 \u2014 first push is the registry reconciliation pass (SUPA v00.05.00)"
+  },
+  {
+   "full_name": "MaggiLunk/TOPOLOGY",
+   "artifact_label": null,
+   "flag": null
+  },
+  {
+   "full_name": "MaggiLunk/WEBSERVER",
+   "artifact_label": "WEBSERVER",
+   "flag": null
+  }
+ ],
+ "log_tail": [
+  {
+   "log_id": "2026-10-27-005",
+   "label_slug": "supa",
+   "kind": "reconciliation",
+   "to_version": "v00.07.00"
+  },
+  {
+   "log_id": "2026-10-27-004",
+   "label_slug": "supa",
+   "kind": "standard-change",
+   "to_version": "v00.07.00"
+  },
+  {
+   "log_id": "2026-10-27-003",
+   "label_slug": "dashboard",
+   "kind": "build",
+   "to_version": "v1.15.00"
+  },
+  {
+   "log_id": "2026-10-27-002",
+   "label_slug": "dashboard",
+   "kind": "push",
+   "to_version": "v1.15.00"
+  },
+  {
+   "log_id": "2026-10-27-001",
+   "label_slug": "supa",
+   "kind": "standard-change",
+   "to_version": "v00.07.00"
+  },
+  {
+   "log_id": "2026-10-26-016",
+   "label_slug": "dashboard",
+   "kind": "lock",
+   "to_version": "v1.15.00"
+  },
+  {
+   "log_id": "2026-10-26-015",
+   "label_slug": "music",
+   "kind": "fill",
+   "to_version": "v00.06.06"
+  },
+  {
+   "log_id": "2026-10-26-014",
+   "label_slug": "pix",
+   "kind": "ssot-move",
+   "to_version": "v00.06.06"
+  },
+  {
+   "log_id": "2026-10-26-013",
+   "label_slug": "supa",
+   "kind": "sync",
+   "to_version": "v00.06.05"
+  },
+  {
+   "log_id": "2026-10-26-006",
+   "label_slug": "supa",
+   "kind": "fix",
+   "to_version": "v00.06.05"
+  }
+ ]
+}
